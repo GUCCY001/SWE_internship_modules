@@ -64,6 +64,6 @@ Goal:
 
 ## User Stories
 
-1. As a registered user, I want to log into my account securely so that I can access my personal dashboard.
+1. As a registered user, I want to log into my account securely using authentication controls so that I can safely access my personal dashboard and protect my data.
 
 2. As a user, I want to reset my forgotten password so that I can regain access to my account.
