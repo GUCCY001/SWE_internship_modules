@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">                  <!-- ✅ ADD THIS (line 4) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- ✅ ADD THIS (line 5) -->
+        <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>📝 My Task Manager</h1>
+
+        <label for="taskInput">Enter a task:</label>   <!-- ✅ ADD ABOVE INPUT -->
+
+<input 
+  type="text" 
+  id="taskInput" 
+  placeholder="Enter a task"
+  aria-label="Task input"                      <!-- ✅ ADD THIS -->
+>
+
+<button onclick="addTask()" aria-label="Add task">  <!-- ✅ ADD THIS -->
+  Add Task
+</button>
+
+        <ul id="taskList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
