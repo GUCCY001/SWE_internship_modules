@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accessible Pricing Cards</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="page">
+    <h1 class="page-title">Choose your plan</h1>
+
+    <!-- Monthly / Annual toggle -->
+    <div class="toggle-wrap">
+      <span id="monthlyLabel" class="toggle-label">Monthly</span>
+
+      <button
+        type="button"
+        id="billingToggle"
+        class="switch"
+        role="switch"
+        aria-checked="false"
+        aria-labelledby="monthlyLabel annualLabel">
+        <span class="switch-thumb" aria-hidden="true"></span>
+      </button>
+
+      <span id="annualLabel" class="toggle-label">Annual <small>(save 20%)</small></span>
+    </div>
+
+    <!-- Pricing grid -->
+    <section class="pricing-grid" aria-label="Pricing plans">
+
+      <article class="card">
+        <h2 class="card-title">Starter</h2>
+        <p class="card-price">
+          <span class="price-monthly">$9<span class="price-unit">/mo</span></span>
+          <span class="price-annual hidden">$86<span class="price-unit">/yr</span></span>
+        </p>
+        <ul class="card-features">
+          <li>1 user</li>
+          <li>5 projects</li>
+          <li>Community support</li>
+        </ul>
+        <button type="button" class="cta-btn" data-plan="Starter">Get Started</button>
+      </article>
+
+      <article class="card card-featured">
+        <p class="badge">Most popular</p>
+        <h2 class="card-title">Pro</h2>
+        <p class="card-price">
+          <span class="price-monthly">$29<span class="price-unit">/mo</span></span>
+          <span class="price-annual hidden">$278<span class="price-unit">/yr</span></span>
+        </p>
+        <ul class="card-features">
+          <li>5 users</li>
+          <li>Unlimited projects</li>
+          <li>Priority support</li>
+        </ul>
+        <button type="button" class="cta-btn" data-plan="Pro">Get Started</button>
+      </article>
+
+      <article class="card">
+        <h2 class="card-title">Enterprise</h2>
+        <p class="card-price">
+          <span class="price-monthly">$99<span class="price-unit">/mo</span></span>
+          <span class="price-annual hidden">$950<span class="price-unit">/yr</span></span>
+        </p>
+        <ul class="card-features">
+          <li>Unlimited users</li>
+          <li>Unlimited projects</li>
+          <li>Dedicated support</li>
+        </ul>
+        <button type="button" class="cta-btn" data-plan="Enterprise">Get Started</button>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div id="modalOverlay" class="modal-overlay hidden">
+    <div
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+      aria-describedby="modalDesc">
+
+      <h2 id="modalTitle">Get started with <span id="modalPlanName">Plan</span></h2>
+      <p id="modalDesc">Enter your email and we'll set up your account.</p>
+
+      <label for="modalEmail" class="modal-label">Email address</label>
+      <input type="email" id="modalEmail" class="modal-input" placeholder="you@example.com">
+
+      <div class="modal-actions">
+        <button type="button" id="modalCancel" class="btn-secondary">Cancel</button>
+        <button type="button" id="modalConfirm" class="btn-primary">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
